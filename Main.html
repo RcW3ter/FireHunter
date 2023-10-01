@@ -1,0 +1,169 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Google FireHunter</title>
+</head>
+<style>
+    #horloge {
+        width: 200px;
+        height: 100px;
+        border: 2px solid black;
+        margin: 0 auto;
+        margin-top: 100px;
+        text-align: center;
+        font-size: 48px;
+        line-height: 100px;
+        min-height: 100%;
+        display: grid;
+        grid-template-rows: auto 1fr auto;
+        color: white;
+    }
+    body {
+        background-image: url("Font.jpg");
+        background-size: cover;
+        background-repeat: no-repeat;
+        background-position: center;
+    }
+    .center_{
+        align-items: center;
+    }
+    .container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 50vh;
+    }
+    
+    .search-form {
+    display: flex;
+    }
+    
+    .search-input {
+    padding: 8px;
+    font-size: 32px;
+    border: 1px solid #ccc;
+    border-radius: 4px 0 0 4px;
+    }
+    
+    .search-button {
+    padding: 8px 16px;
+    font-size: 16px;
+    background-color: #000000;
+    color: #ffffff;
+    border: none;
+    border-radius: 0 4px 4px 0;
+    cursor: pointer;
+    }
+    
+    .search-button:hover {
+    opacity: 0.8;
+    }
+    .ytb {
+        padding: 60px 100px;
+        font-size: 20px;
+        background-image: url(ytb.jpg);
+        background-size: cover;
+        background-position: center; 
+    }
+    .gpt {
+        padding: 60px 100px;
+        font-size: 20px;
+        background-image: url(gpt.jpg);
+        background-size: cover;
+        background-position: center;
+    }
+    .ent {
+        padding: 60px 100px;
+        font-size: 20px;
+        background-image: url(ent.png);
+        background-size: cover;
+        background-position: center;
+    }
+    .capcut {
+        padding: 60px 100px;
+        font-size: 20px;
+        background-image: url(capcut.jpg);
+        background-size: cover;
+        background-position: center;
+    }
+    .spotify {
+        padding: 60px 100px;
+        font-size: 20px;
+        background-image: url(spotify.jpg);
+        background-size: cover;
+        background-position: center;
+    }
+    .discord {
+        padding: 60px 100px;
+        font-size: 20px;
+        background-image: url(discord.jpg);
+        background-size: cover;
+        background-position: center;
+    }
+    footer {
+    background-color: #f2f2f2;
+    padding: 20px;
+    text-align: center;
+    position: fixed;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    }
+</style>
+<body>
+    <div id="font">
+        <div id="horloge"></div>
+
+        <script>
+            function horlogeDigitale() {
+            var horloge = document.getElementById("horloge");
+            setInterval(function() {
+                var date = new Date();
+                var heure = date.getHours();
+                var minutes = date.getMinutes();
+                var secondes = date.getSeconds();
+                horloge.innerText = heure + ":" + minutes + ":" + secondes;
+            }, 1000);
+            }
+
+            horlogeDigitale();
+        </script>
+    </div>
+
+    <div class="container">
+        <form class="search-form">
+            <input type="text" class="search-input" placeholder="Recherche...">
+            <button type="submit" class="search-button">Rechercher</button>
+        </form>
+    </div>
+    <div class="center_">
+        <button onclick="ytb()" class="ytb"> </button>
+        <button onclick="ent()" class="ent"> </button>
+        <button onclick="capcut()" class="capcut"> </button>
+        <button onclick="spotify()" class="spotify"> </button>
+        <button onclick="discord()" class="discord"> </button>
+    </div>
+    <script>
+        function ytb() {
+        window.location.href = ("https://www.youtube.com/");
+        }
+        function ent() {
+        window.location.href = ("https://www.moncollege-ent.essonne.fr/auth/login?callback=https%3A%2F%2Fwww.moncollege-ent.essonne.fr%2F#/");
+        }
+        function capcut() {
+        window.location.href = ("https://www.capcut.com/my-edit");
+        }
+        function spotify() {
+        window.location.href = ("https://open.spotify.com/intl-fr");
+        }
+        function discord() {
+        window.location.href = ("https://discord.com/channels/@me/1152279431520452721");
+        }
+    </script>
+
+</body>
+<footer>
+    <p><br><br><br></p>
+</footer>
+</html>
